@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5583371-7AE6-4B13-841D-8E0ED79F429C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication3</RootNamespace>
+    <AssemblyName>WindowsFormsApplication3</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BDComun.cs" />
+    <Compile Include="DataSetPrincipal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarDevice.Designer.cs">
+      <DependentUpon>frmBuscarDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarE.Designer.cs">
+      <DependentUpon>frmBuscarE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarLote.Designer.cs">
+      <DependentUpon>frmBuscarLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarReposicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarReposicion.Designer.cs">
+      <DependentUpon>frmBuscarReposicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarUsuario.Designer.cs">
+      <DependentUpon>frmBuscarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevice.Designer.cs">
+      <DependentUpon>frmDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLote.Designer.cs">
+      <DependentUpon>frmLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProd_Etapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProd_Etapa.Designer.cs">
+      <DependentUpon>frmProd_Etapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReposicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReposicion.Designer.cs">
+      <DependentUpon>frmReposicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lote.cs" />
+    <Compile Include="LoteDAL.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mEtapaF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mEtapaF.Designer.cs">
+      <DependentUpon>mEtapaF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarEFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarEFechas.Designer.cs">
+      <DependentUpon>MostrarEFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarI.Designer.cs">
+      <DependentUpon>MostrarI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarL.Designer.cs">
+      <DependentUpon>MostrarL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarRep.Designer.cs">
+      <DependentUpon>MostrarRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarS.Designer.cs">
+      <DependentUpon>MostrarS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarU.Designer.cs">
+      <DependentUpon>MostrarU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mReporteF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mReporteF.Designer.cs">
+      <DependentUpon>mReporteF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarEF.Designer.cs">
+      <DependentUpon>MostrarEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mReporteI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mReporteI.Designer.cs">
+      <DependentUpon>mReporteI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mReporteL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mReporteL.Designer.cs">
+      <DependentUpon>mReporteL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mReporteRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mReporteRep.Designer.cs">
+      <DependentUpon>mReporteRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mReporteU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mReporteU.Designer.cs">
+      <DependentUpon>mReporteU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mStatusL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mStatusL.Designer.cs">
+      <DependentUpon>mStatusL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prodEtapa.cs" />
+    <Compile Include="prodEtapaDAL.cs" />
+    <Compile Include="produccionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>produccionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="produccionDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>produccionDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="produccionDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>produccionDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Producto.cs" />
+    <Compile Include="ProductoDAL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reposicion.cs" />
+    <Compile Include="ReposicionDAL.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioDAL.cs" />
+    <EmbeddedResource Include="frmBuscarDevice.resx">
+      <DependentUpon>frmBuscarDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarE.resx">
+      <DependentUpon>frmBuscarE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarLote.resx">
+      <DependentUpon>frmBuscarLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarReposicion.resx">
+      <DependentUpon>frmBuscarReposicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarUsuario.resx">
+      <DependentUpon>frmBuscarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDevice.resx">
+      <DependentUpon>frmDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLote.resx">
+      <DependentUpon>frmLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProd_Etapa.resx">
+      <DependentUpon>frmProd_Etapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReposicion.resx">
+      <DependentUpon>frmReposicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mEtapaF.resx">
+      <DependentUpon>mEtapaF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarEFechas.resx">
+      <DependentUpon>MostrarEFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarI.resx">
+      <DependentUpon>MostrarI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarL.resx">
+      <DependentUpon>MostrarL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarRep.resx">
+      <DependentUpon>MostrarRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarS.resx">
+      <DependentUpon>MostrarS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarU.resx">
+      <DependentUpon>MostrarU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mReporteF.resx">
+      <DependentUpon>mReporteF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarEF.resx">
+      <DependentUpon>MostrarEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mReporteI.resx">
+      <DependentUpon>mReporteI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mReporteL.resx">
+      <DependentUpon>mReporteL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mReporteRep.resx">
+      <DependentUpon>mReporteRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mReporteU.resx">
+      <DependentUpon>mReporteU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mStatusL.resx">
+      <DependentUpon>mStatusL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rEtapasF.rdlc" />
+    <EmbeddedResource Include="rFechaDev.rdlc" />
+    <EmbeddedResource Include="rLoteDev.rdlc" />
+    <EmbeddedResource Include="rLoteUb.rdlc" />
+    <EmbeddedResource Include="rReposicion.rdlc" />
+    <EmbeddedResource Include="rStatusLote.rdlc" />
+    <EmbeddedResource Include="rTipoIssue.rdlc" />
+    <None Include="DataSetPrincipal.xsc">
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPrincipal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPrincipal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPrincipal.xss">
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </None>
+    <None Include="produccionDataSet.xsc">
+      <DependentUpon>produccionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="produccionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>produccionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="produccionDataSet.xss">
+      <DependentUpon>produccionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="produccionDataSet1.xsc">
+      <DependentUpon>produccionDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="produccionDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>produccionDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="produccionDataSet1.xss">
+      <DependentUpon>produccionDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="produccionDataSet2.xsc">
+      <DependentUpon>produccionDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="produccionDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>produccionDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="produccionDataSet2.xss">
+      <DependentUpon>produccionDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\router.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eval.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-cross-icon-21533.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replace.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replace1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
